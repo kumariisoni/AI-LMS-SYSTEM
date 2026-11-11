@@ -138,12 +138,8 @@ app.UseExceptionHandler(errorApp =>
         {
             success = false,
             error = "Server Exception",
-            message = app.Environment.IsDevelopment()
-                ? exception?.Message
-                : "An internal server error occurred.",
-            type = app.Environment.IsDevelopment()
-                ? exception?.GetType().Name
-                : null
+            message = exception?.Message ?? "An unexpected server error occurred.",
+            type = exception?.GetType().Name
         });
     });
 });
@@ -184,15 +180,34 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 // ========================================
-// 12. Database Connectivity Health Check
+// 12. Database Connectivity Health Check & Diagnostics
 // ========================================
 app.MapGet("/api/health", async (MongoDbContext db, CancellationToken ct) =>
 {
+    if (db.InitializationException != null)
+    {
+        return Results.Json(
+            new
+            {
+                status = "unhealthy",
+                database = db.DatabaseName,
+                connection = "Failed to initialize",
+                error = db.InitializationException.Message,
+                hint = "Please check your MONGODB_URI on Render dashboard. If your password contains special characters, make sure they are URL encoded.",
+                timestamp = DateTime.UtcNow
+            },
+            statusCode: StatusCodes.Status503ServiceUnavailable
+        );
+    }
+
     try
     {
+        using var cts = CancellationTokenSource.CreateLinkedTokenSource(ct);
+        cts.CancelAfter(TimeSpan.FromSeconds(5));
+
         await db.Database.RunCommandAsync<MongoDB.Bson.BsonDocument>(
             new MongoDB.Bson.BsonDocument("ping", 1),
-            cancellationToken: ct
+            cancellationToken: cts.Token
         );
 
         return Results.Ok(new
@@ -200,20 +215,26 @@ app.MapGet("/api/health", async (MongoDbContext db, CancellationToken ct) =>
             status = "healthy",
             database = db.DatabaseName,
             connection = "Connected",
+            connectionUri = db.MaskedConnectionString,
             timestamp = DateTime.UtcNow
         });
     }
     catch (Exception ex)
     {
+        var hint = ex.Message.Contains("timeout", StringComparison.OrdinalIgnoreCase)
+            ? "Connection timed out. In MongoDB Atlas, go to Network Access and verify 0.0.0.0/0 (Allow Access from Anywhere) is active."
+            : (ex.Message.Contains("Authentication", StringComparison.OrdinalIgnoreCase) || ex.Message.Contains("auth", StringComparison.OrdinalIgnoreCase)
+                ? "Authentication failed. Check your database username and password in MONGODB_URI."
+                : "Database connection failed. Verify your connection string.");
+
         return Results.Json(
             new
             {
                 status = "unhealthy",
                 database = db.DatabaseName,
                 connection = "Disconnected",
-                message = app.Environment.IsDevelopment()
-                    ? ex.Message
-                    : "Database connection failed.",
+                message = ex.Message,
+                hint,
                 timestamp = DateTime.UtcNow
             },
             statusCode: StatusCodes.Status503ServiceUnavailable

@@ -6,8 +6,13 @@ namespace AI_LMS.API.Data;
 
 public class MongoDbContext
 {
-    private readonly IMongoDatabase _database;
+    private readonly IMongoClient? _client;
+    private readonly IMongoDatabase? _database;
     private readonly string _connectionString;
+    private readonly Exception? _initializationException;
+
+    public string DatabaseName { get; }
+    public Exception? InitializationException => _initializationException;
 
     public MongoDbContext(IConfiguration configuration)
     {
@@ -18,34 +23,32 @@ public class MongoDbContext
             configuration.GetConnectionString("MongoDB") ??
             "mongodb://localhost:27017";
 
-        _connectionString = rawConn.Trim();
+        // Clean any surrounding quotes or extra whitespace from cloud dashboard copy-paste
+        _connectionString = rawConn.Trim().Trim('"', '\'');
 
-        var client = new MongoClient(_connectionString);
-
-        // Allow database name from env, config, or connection string
-        string? urlDb = null;
         try
         {
             var mongoUrl = MongoUrl.Create(_connectionString);
-            urlDb = mongoUrl.DatabaseName;
+            _client = new MongoClient(mongoUrl);
+
+            var dbFromUrl = mongoUrl.DatabaseName;
+            DatabaseName =
+                Environment.GetEnvironmentVariable("MONGODB_DATABASE") ??
+                configuration["MongoDB:DatabaseName"] ??
+                (!string.IsNullOrWhiteSpace(dbFromUrl) ? dbFromUrl : "AI_LMS");
+
+            _database = _client.GetDatabase(DatabaseName);
         }
-        catch
+        catch (Exception ex)
         {
-            // Fall back to configured database name
+            _initializationException = ex;
+            DatabaseName = Environment.GetEnvironmentVariable("MONGODB_DATABASE") ?? configuration["MongoDB:DatabaseName"] ?? "AI_LMS";
+            Console.WriteLine($"[MongoDbContext Error] Could not initialize MongoDB: {ex.Message}");
         }
-
-        var databaseName =
-            Environment.GetEnvironmentVariable("MONGODB_DATABASE") ??
-            configuration["MongoDB:DatabaseName"] ??
-            urlDb ??
-            "AI_LMS";
-
-        _database = client.GetDatabase(databaseName);
     }
 
-    public IMongoDatabase Database => _database;
-
-    public string DatabaseName => _database.DatabaseNamespace.DatabaseName;
+    public IMongoDatabase Database =>
+        _database ?? throw new InvalidOperationException($"MongoDB database is unavailable: {_initializationException?.Message}");
 
     public string MaskedConnectionString
     {
@@ -57,20 +60,20 @@ public class MongoDbContext
     }
 
     public IMongoCollection<User> Users =>
-        _database.GetCollection<User>("users");
+        Database.GetCollection<User>("users");
 
     public IMongoCollection<Course> Courses =>
-        _database.GetCollection<Course>("courses");
+        Database.GetCollection<Course>("courses");
 
     public IMongoCollection<Faculty> Faculty =>
-        _database.GetCollection<Faculty>("faculty");
+        Database.GetCollection<Faculty>("faculty");
 
     public IMongoCollection<Enrollment> Enrollments =>
-        _database.GetCollection<Enrollment>("enrollments");
+        Database.GetCollection<Enrollment>("enrollments");
 
     public IMongoCollection<StudentProgress> StudentProgress =>
-        _database.GetCollection<StudentProgress>("studentProgress");
+        Database.GetCollection<StudentProgress>("studentProgress");
 
     public IMongoCollection<Certificate> Certificates =>
-        _database.GetCollection<Certificate>("certificates");
+        Database.GetCollection<Certificate>("certificates");
 }
