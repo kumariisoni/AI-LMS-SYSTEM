@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: ai-lms-backend
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: ASPNETCORE_ENVIRONMENT
+        value: Production
+      - key: MONGODB_URI
+        sync: false
+      - key: MONGODB_DATABASE
+        value: AI_LMS
+      - key: JWT_SECRET
+        generateValue: true
+      - key: Gemini__ApiKey
+        sync: false
+      - key: Gemini__Model
+        value: gemini-1.5-flash
+      - key: FRONTEND_URL
+        sync: false
+      - key: ADMIN_EMAIL
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false

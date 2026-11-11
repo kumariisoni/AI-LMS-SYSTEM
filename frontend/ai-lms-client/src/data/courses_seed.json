@@ -1,0 +1,2067 @@
+[
+  {
+    "title": ".NET & ASP.NET Core Web Development",
+    "category": ".NET / ASP.NET",
+    "level": "Intermediate",
+    "description": "Comprehensive engineering curriculum covering C# fundamentals, object-oriented design, ASP.NET Core Web APIs, dependency injection, middleware pipeline, MongoDB integration, BCrypt password hashing, JWT authentication, and full-stack React integration.",
+    "thumbnail": "/images/courses/dotnet.jpg",
+    "modules": [
+      {
+        "title": "Module 1 \u2014 .NET & C# Fundamentals",
+        "order": 1,
+        "lessons": [
+          {
+            "id": "net-1-1",
+            "title": "Introduction to .NET Ecosystem",
+            "description": "Overview of the .NET platform, CLR, unified SDK architecture, and modern C# runtime.",
+            "videoUrl": "https://www.youtube.com/watch?v=0u9k-kOR3KE",
+            "youtubeVideoId": "0u9k-kOR3KE",
+            "author": "Naresh i Technologies",
+            "duration": "18 min",
+            "order": 1,
+            "isPreview": true
+          },
+          {
+            "id": "net-1-2",
+            "title": ".NET SDK, CLI and CLR Runtime",
+            "description": "Deep dive into .NET CLI commands, build targets, IL compilation, and the Common Language Runtime.",
+            "videoUrl": "https://www.youtube.com/watch?v=wEcbv-jjMZo",
+            "youtubeVideoId": "wEcbv-jjMZo",
+            "author": "Digital Dev Academy",
+            "duration": "22 min",
+            "order": 2,
+            "isPreview": false
+          },
+          {
+            "id": "net-1-3",
+            "title": "C# Programming Fundamentals",
+            "description": "Core syntax, data types, control flow, functions, and memory management in C#.",
+            "videoUrl": "https://www.youtube.com/watch?v=GhQdlIFylQ8",
+            "youtubeVideoId": "GhQdlIFylQ8",
+            "author": "freeCodeCamp.org",
+            "duration": "35 min",
+            "order": 3,
+            "isPreview": false
+          },
+          {
+            "id": "net-1-4",
+            "title": "Classes, Objects and OOP in C#",
+            "description": "Object-oriented programming in C#: encapsulation, inheritance, polymorphism, and constructors.",
+            "videoUrl": "https://www.youtube.com/watch?v=ItPGCqQa9S0",
+            "youtubeVideoId": "ItPGCqQa9S0",
+            "author": "Sunny CSharp Tutorials",
+            "duration": "26 min",
+            "order": 4,
+            "isPreview": false
+          },
+          {
+            "id": "net-1-5",
+            "title": "Interfaces and Abstract Classes",
+            "description": "Designing decoupled architectures using C# interfaces, contract implementations, and abstract base classes.",
+            "videoUrl": "https://www.youtube.com/watch?v=JeHNRQiA1-0",
+            "youtubeVideoId": "JeHNRQiA1-0",
+            "author": "tutorialsEU - C#",
+            "duration": "20 min",
+            "order": 5,
+            "isPreview": false
+          },
+          {
+            "id": "net-1-6",
+            "title": "Exception Handling and Logging",
+            "description": "Robust try-catch-finally strategies, custom exceptions, and structured ILogger integration.",
+            "videoUrl": "https://www.youtube.com/watch?v=ooG74nd-oK8",
+            "youtubeVideoId": "ooG74nd-oK8",
+            "author": "Programentor",
+            "duration": "15 min",
+            "order": 6,
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "title": "Module 2 \u2014 ASP.NET Core Architecture",
+        "order": 2,
+        "lessons": [
+          {
+            "id": "net-2-1",
+            "title": "Introduction to ASP.NET Core",
+            "description": "Web API request lifecycle, Kestrel web server, Program.cs bootstrap, and modern minimal hosting.",
+            "videoUrl": "https://www.youtube.com/watch?v=pO-v-b24pIw",
+            "youtubeVideoId": "pO-v-b24pIw",
+            "author": "Programentor",
+            "duration": "25 min",
+            "order": 7,
+            "isPreview": true
+          },
+          {
+            "id": "net-2-2",
+            "title": "Creating a Web API Project",
+            "description": "Scaffolding ASP.NET Core Web API with dotnet CLI, folder layout, and configuration management.",
+            "videoUrl": "https://www.youtube.com/watch?v=xTSildbadAs",
+            "youtubeVideoId": "xTSildbadAs",
+            "author": "LEARNING PARTNER",
+            "duration": "22 min",
+            "order": 8,
+            "isPreview": false
+          },
+          {
+            "id": "net-2-3",
+            "title": "Controllers and Action Results",
+            "description": "Building controller classes, handling ActionResult, Ok, BadRequest, NotFound, and Created responses.",
+            "videoUrl": "https://www.youtube.com/watch?v=w2F_WPcu0JY",
+            "youtubeVideoId": "w2F_WPcu0JY",
+            "author": "procademy",
+            "duration": "28 min",
+            "order": 9,
+            "isPreview": false
+          },
+          {
+            "id": "net-2-4",
+            "title": "Routing and Attribute Routing",
+            "description": "RESTful route templates, route constraints, query parameters, and [Route] attributes.",
+            "videoUrl": "https://www.youtube.com/watch?v=KvY2vwH8KJE",
+            "youtubeVideoId": "KvY2vwH8KJE",
+            "author": "Interview Happy",
+            "duration": "18 min",
+            "order": 10,
+            "isPreview": false
+          },
+          {
+            "id": "net-2-5",
+            "title": "HTTP Methods & RESTful Endpoints",
+            "description": "Implementing GET, POST, PUT, and DELETE methods conforming to standard REST conventions.",
+            "videoUrl": "https://www.youtube.com/watch?v=LfDezKKulcs",
+            "youtubeVideoId": "LfDezKKulcs",
+            "author": "Code with RSV",
+            "duration": "24 min",
+            "order": 11,
+            "isPreview": false
+          },
+          {
+            "id": "net-2-6",
+            "title": "Dependency Injection in .NET Core",
+            "description": "Inversion of Control (IoC), service lifetimes: Transient, Scoped, and Singleton explained with examples.",
+            "videoUrl": "https://www.youtube.com/watch?v=V-8HlozCTOU",
+            "youtubeVideoId": "V-8HlozCTOU",
+            "author": "Poorna Soysa",
+            "duration": "26 min",
+            "order": 12,
+            "isPreview": false
+          },
+          {
+            "id": "net-2-7",
+            "title": "Middleware Pipeline in ASP.NET Core",
+            "description": "Understanding request processing delegates, custom middleware creation, and pipeline ordering.",
+            "videoUrl": "https://www.youtube.com/watch?v=0DfD-cOCFkY",
+            "youtubeVideoId": "0DfD-cOCFkY",
+            "author": "LogicUnboxed",
+            "duration": "30 min",
+            "order": 13,
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "title": "Module 3 \u2014 REST APIs & Best Practices",
+        "order": 3,
+        "lessons": [
+          {
+            "id": "net-3-1",
+            "title": "REST Architecture Principles",
+            "description": "Statelessness, uniform interface, cacheability, and client-server decoupling in modern APIs.",
+            "videoUrl": "https://www.youtube.com/watch?v=7YcW25PHnAA",
+            "youtubeVideoId": "7YcW25PHnAA",
+            "author": "WebConcepts",
+            "duration": "20 min",
+            "order": 14,
+            "isPreview": false
+          },
+          {
+            "id": "net-3-2",
+            "title": "Data Transfer Objects (DTOs) & Mapping",
+            "description": "Decoupling domain entities from public API contracts using DTOs and clean data projections.",
+            "videoUrl": "https://www.youtube.com/watch?v=ckMAEoBI2D4",
+            "youtubeVideoId": "ckMAEoBI2D4",
+            "author": "Nehanth World",
+            "duration": "22 min",
+            "order": 15,
+            "isPreview": false
+          },
+          {
+            "id": "net-3-3",
+            "title": "Model Validation & FluentValidation",
+            "description": "Enforcing data integrity through DataAnnotations and ModelState.IsValid validation.",
+            "videoUrl": "https://www.youtube.com/watch?v=eqpIsw84DC4",
+            "youtubeVideoId": "eqpIsw84DC4",
+            "author": "hikitoc",
+            "duration": "25 min",
+            "order": 16,
+            "isPreview": false
+          },
+          {
+            "id": "net-3-4",
+            "title": "HTTP Status Codes & Error Responses",
+            "description": "Standard status codes (200, 201, 400, 401, 403, 404, 500) and structured RFC 7807 ProblemDetails.",
+            "videoUrl": "https://www.youtube.com/watch?v=aumDleTg_UQ",
+            "youtubeVideoId": "aumDleTg_UQ",
+            "author": "sudoCODE",
+            "duration": "18 min",
+            "order": 17,
+            "isPreview": false
+          },
+          {
+            "id": "net-3-5",
+            "title": "Swagger & OpenAPI Documentation",
+            "description": "Interactive API discovery and testing using Swashbuckle OpenAPI documentation in ASP.NET Core.",
+            "videoUrl": "https://www.youtube.com/watch?v=uvUdOiPQLSI",
+            "youtubeVideoId": "uvUdOiPQLSI",
+            "author": "BoostMyTool",
+            "duration": "22 min",
+            "order": 18,
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "title": "Module 4 \u2014 Database & MongoDB Integration",
+        "order": 4,
+        "lessons": [
+          {
+            "id": "net-4-1",
+            "title": "Database Connectivity in ASP.NET Core",
+            "description": "Connecting external database engines to ASP.NET Core with dependency-injected connection pools.",
+            "videoUrl": "https://www.youtube.com/watch?v=T-e554Zt3n4",
+            "youtubeVideoId": "T-e554Zt3n4",
+            "author": "BoostMyTool",
+            "duration": "25 min",
+            "order": 19,
+            "isPreview": false
+          },
+          {
+            "id": "net-4-2",
+            "title": "MongoDB Driver Setup with C#",
+            "description": "Configuring official MongoDB.Driver, MongoUrl, BsonSerialization, and MongoDbContext in .NET.",
+            "videoUrl": "https://www.youtube.com/watch?v=WaTbNXJbdDE",
+            "youtubeVideoId": "WaTbNXJbdDE",
+            "author": "DP Tech Info",
+            "duration": "28 min",
+            "order": 20,
+            "isPreview": false
+          },
+          {
+            "id": "net-4-3",
+            "title": "Repository Pattern in ASP.NET Core",
+            "description": "Abstracting data access logic with interfaces and concrete repository classes for testability.",
+            "videoUrl": "https://www.youtube.com/watch?v=qJmEI2LtXIY",
+            "youtubeVideoId": "qJmEI2LtXIY",
+            "author": "kudvenkat",
+            "duration": "30 min",
+            "order": 21,
+            "isPreview": false
+          },
+          {
+            "id": "net-4-4",
+            "title": "Implementing CRUD Operations with MongoDB",
+            "description": "Step-by-step implementation of Find, InsertOne, ReplaceOne, and DeleteOne operations in C#.",
+            "videoUrl": "https://www.youtube.com/watch?v=h80jfDkp5B8",
+            "youtubeVideoId": "h80jfDkp5B8",
+            "author": "Csharp Space",
+            "duration": "32 min",
+            "order": 22,
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "title": "Module 5 \u2014 Authentication & Security",
+        "order": 5,
+        "lessons": [
+          {
+            "id": "net-5-1",
+            "title": "Authentication vs Authorization Explained",
+            "description": "Conceptual distinction between identity verification and permission control in distributed systems.",
+            "videoUrl": "https://www.youtube.com/watch?v=7ijBiXddB7w",
+            "youtubeVideoId": "7ijBiXddB7w",
+            "author": "xplodivity",
+            "duration": "16 min",
+            "order": 23,
+            "isPreview": false
+          },
+          {
+            "id": "net-5-2",
+            "title": "BCrypt Password Hashing in C#",
+            "description": "Cryptographically secure one-way salted password hashing with BCrypt.Net in C#.",
+            "videoUrl": "https://www.youtube.com/watch?v=m0hknG1DjmU",
+            "youtubeVideoId": "m0hknG1DjmU",
+            "author": "Software Nuggets",
+            "duration": "18 min",
+            "order": 24,
+            "isPreview": false
+          },
+          {
+            "id": "net-5-3",
+            "title": "JWT Token Authentication in ASP.NET Core",
+            "description": "Generating, signing, and validating JSON Web Tokens using Microsoft.AspNetCore.Authentication.JwtBearer.",
+            "videoUrl": "https://www.youtube.com/watch?v=z5ItU_fxUdE",
+            "youtubeVideoId": "z5ItU_fxUdE",
+            "author": "SyncSyntax",
+            "duration": "35 min",
+            "order": 25,
+            "isPreview": false
+          },
+          {
+            "id": "net-5-4",
+            "title": "Role-Based Access Control (RBAC)",
+            "description": "Configuring claims, roles (Admin, Faculty, Student), and claims-based authorization policies.",
+            "videoUrl": "https://www.youtube.com/watch?v=DXVe6skc42k",
+            "youtubeVideoId": "DXVe6skc42k",
+            "author": "kudvenkat",
+            "duration": "24 min",
+            "order": 26,
+            "isPreview": false
+          },
+          {
+            "id": "net-5-5",
+            "title": "Protecting API Endpoints with Authorize",
+            "description": "Securing controller endpoints with [Authorize(Roles = '...')] attribute guards.",
+            "videoUrl": "https://www.youtube.com/watch?v=DzN0yvcmNKU",
+            "youtubeVideoId": "DzN0yvcmNKU",
+            "author": "WebGentle",
+            "duration": "20 min",
+            "order": 27,
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "title": "Module 6 \u2014 Full Stack Project & Deployment",
+        "order": 6,
+        "lessons": [
+          {
+            "id": "net-6-1",
+            "title": "Connecting React Frontend to ASP.NET Core API",
+            "description": "Configuring CORS policies in Program.cs and consuming REST endpoints with Axios in React.",
+            "videoUrl": "https://www.youtube.com/watch?v=W5feBzSWiPI",
+            "youtubeVideoId": "W5feBzSWiPI",
+            "author": "Programming with Felipe Gavilan",
+            "duration": "30 min",
+            "order": 28,
+            "isPreview": false
+          },
+          {
+            "id": "net-6-2",
+            "title": "Deploying ASP.NET Core Web API",
+            "description": "Publishing release binaries, configuring environment variables, and production deployment.",
+            "videoUrl": "https://www.youtube.com/watch?v=E45A03_wcpA",
+            "youtubeVideoId": "E45A03_wcpA",
+            "author": "Frontend to Backend with Rohan",
+            "duration": "26 min",
+            "order": 29,
+            "isPreview": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Computer Networks \u2014 Complete Course",
+    "category": "Computer Networks",
+    "level": "Intermediate",
+    "description": "Comprehensive university lecture series covering network layers, OSI and TCP/IP models, physical media, framing, CRC, switching, IPv4 & IPv6 addressing, subnetting, routing algorithms, transport protocols (TCP/UDP), DNS, HTTP, DHCP, firewalls, and network security.",
+    "thumbnail": "/images/courses/computer-networks.jpg",
+    "modules": [
+      {
+        "title": "Module 1 \u2014 Networking Fundamentals",
+        "order": 1,
+        "lessons": [
+          {
+            "id": "cn-1-1",
+            "title": "Introduction to Computer Networks",
+            "description": "Academic overview of computer network architectures, transmission principles, and foundational terminology.",
+            "videoUrl": "https://www.youtube.com/watch?v=JFF2vJaN0Cw",
+            "youtubeVideoId": "JFF2vJaN0Cw",
+            "author": "Gate Smashers",
+            "duration": "20 min",
+            "order": 1,
+            "isPreview": true
+          },
+          {
+            "id": "cn-1-2",
+            "title": "Network Types: LAN, MAN, WAN",
+            "description": "Classification of networks by geographic scale: Local, Metropolitan, Wide, Personal, and Campus Area Networks.",
+            "videoUrl": "https://www.youtube.com/watch?v=n0iaPtsnmxQ",
+            "youtubeVideoId": "n0iaPtsnmxQ",
+            "author": "Gate Smashers",
+            "duration": "18 min",
+            "order": 2,
+            "isPreview": false
+          },
+          {
+            "id": "cn-1-3",
+            "title": "Network Topologies: Mesh, Star, Bus, Ring",
+            "description": "Physical and logical layout topologies: Star, Mesh, Bus, Ring, Tree, and Hybrid architectures.",
+            "videoUrl": "https://www.youtube.com/watch?v=uDulBxDb7GM",
+            "youtubeVideoId": "uDulBxDb7GM",
+            "author": "Gate Smashers",
+            "duration": "22 min",
+            "order": 3,
+            "isPreview": false
+          },
+          {
+            "id": "cn-1-4",
+            "title": "OSI 7-Layer Architecture in Depth",
+            "description": "Detailed breakdown of each layer of the Open Systems Interconnection reference model and data encapsulation.",
+            "videoUrl": "https://www.youtube.com/watch?v=4D55Cmj2t-A",
+            "youtubeVideoId": "4D55Cmj2t-A",
+            "author": "Gate Smashers",
+            "duration": "25 min",
+            "order": 4,
+            "isPreview": false
+          },
+          {
+            "id": "cn-1-5",
+            "title": "TCP/IP Protocol Suite",
+            "description": "The 4-layer DoD / TCP/IP model, protocol mapping, and comparison against the OSI reference standard.",
+            "videoUrl": "https://www.youtube.com/watch?v=TVr0RZ1-74g",
+            "youtubeVideoId": "TVr0RZ1-74g",
+            "author": "Gate Smashers",
+            "duration": "24 min",
+            "order": 5,
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "title": "Module 2 \u2014 Physical & Data Link Layer",
+        "order": 2,
+        "lessons": [
+          {
+            "id": "cn-2-1",
+            "title": "Transmission Media: Guided vs Unguided",
+            "description": "Twisted pair, coaxial, optical fiber, wireless propagation, and transmission impairments.",
+            "videoUrl": "https://www.youtube.com/watch?v=WuQKlGaa9Bg",
+            "youtubeVideoId": "WuQKlGaa9Bg",
+            "author": "Explore - The Knowledge Tv",
+            "duration": "19 min",
+            "order": 6,
+            "isPreview": false
+          },
+          {
+            "id": "cn-2-2",
+            "title": "Ethernet & CSMA/CD Protocol",
+            "description": "Ethernet frame format, Carrier Sense Multiple Access with Collision Detection, and backoff algorithm.",
+            "videoUrl": "https://www.youtube.com/watch?v=v_z888gQWq0",
+            "youtubeVideoId": "v_z888gQWq0",
+            "author": "Gate Smashers",
+            "duration": "24 min",
+            "order": 7,
+            "isPreview": false
+          },
+          {
+            "id": "cn-2-3",
+            "title": "MAC Addressing & Physical Frames",
+            "description": "Media Access Control (MAC) 48-bit address structure, unicast, multicast, and broadcast frames.",
+            "videoUrl": "https://www.youtube.com/watch?v=G0h0dC4Zycs",
+            "youtubeVideoId": "G0h0dC4Zycs",
+            "author": "Gate Smashers",
+            "duration": "21 min",
+            "order": 8,
+            "isPreview": false
+          },
+          {
+            "id": "cn-2-4",
+            "title": "Switching: Circuit vs Packet Switching",
+            "description": "Connection-oriented circuit switching versus connectionless datagram and virtual circuit packet switching.",
+            "videoUrl": "https://www.youtube.com/watch?v=Cug52cpjM_g",
+            "youtubeVideoId": "Cug52cpjM_g",
+            "author": "Gate Smashers",
+            "duration": "22 min",
+            "order": 9,
+            "isPreview": false
+          },
+          {
+            "id": "cn-2-5",
+            "title": "Error Detection & CRC (Cyclic Redundancy Check)",
+            "description": "Parity checks, checksums, and polynomial division CRC for robust bit-error detection in frames.",
+            "videoUrl": "https://www.youtube.com/watch?v=5Q-Yv6_0Qcw",
+            "youtubeVideoId": "5Q-Yv6_0Qcw",
+            "author": "Gate Smashers",
+            "duration": "26 min",
+            "order": 10,
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "title": "Module 3 \u2014 Network Layer & IP Addressing",
+        "order": 3,
+        "lessons": [
+          {
+            "id": "cn-3-1",
+            "title": "IPv4 Header Format & Fields",
+            "description": "32-bit IPv4 packet header analysis: TTL, fragmentation offset, flags, protocol type, and checksum.",
+            "videoUrl": "https://www.youtube.com/watch?v=zoFSxIuS5Ro",
+            "youtubeVideoId": "zoFSxIuS5Ro",
+            "author": "Gate Smashers",
+            "duration": "28 min",
+            "order": 11,
+            "isPreview": false
+          },
+          {
+            "id": "cn-3-2",
+            "title": "IPv6 Header & Architecture",
+            "description": "128-bit IPv6 address structure, base header format, extension headers, and migration from IPv4.",
+            "videoUrl": "https://www.youtube.com/watch?v=U3rGOTxwXAI",
+            "youtubeVideoId": "U3rGOTxwXAI",
+            "author": "Gate Smashers",
+            "duration": "25 min",
+            "order": 12,
+            "isPreview": false
+          },
+          {
+            "id": "cn-3-3",
+            "title": "IP Addressing & Subnetting (Classful & VLSM)",
+            "description": "Class A, B, C addressing, subnet masks, network IDs, broadcast IDs, and Variable Length Subnet Masking.",
+            "videoUrl": "https://www.youtube.com/watch?v=rdb2ki4iGuo",
+            "youtubeVideoId": "rdb2ki4iGuo",
+            "author": "Gate Smashers",
+            "duration": "32 min",
+            "order": 13,
+            "isPreview": false
+          },
+          {
+            "id": "cn-3-4",
+            "title": "Classless Addressing & CIDR",
+            "description": "Classless Inter-Domain Routing (CIDR) prefix notation, route aggregation, and supernetting.",
+            "videoUrl": "https://www.youtube.com/watch?v=N-ywmOpWehE",
+            "youtubeVideoId": "N-ywmOpWehE",
+            "author": "Gate Smashers",
+            "duration": "26 min",
+            "order": 14,
+            "isPreview": false
+          },
+          {
+            "id": "cn-3-5",
+            "title": "Distance Vector Routing Algorithm",
+            "description": "Bellman-Ford-based routing updates, routing tables, and the count-to-infinity problem.",
+            "videoUrl": "https://www.youtube.com/watch?v=5ZuP5qjbKSI",
+            "youtubeVideoId": "5ZuP5qjbKSI",
+            "author": "Gate Smashers",
+            "duration": "24 min",
+            "order": 15,
+            "isPreview": false
+          },
+          {
+            "id": "cn-3-6",
+            "title": "Link State Routing & OSPF Principles",
+            "description": "Dijkstra algorithm for shortest path calculation, link-state advertisements (LSA), and OSPF zones.",
+            "videoUrl": "https://www.youtube.com/watch?v=kW6zV-040SY",
+            "youtubeVideoId": "kW6zV-040SY",
+            "author": "Gate Smashers",
+            "duration": "27 min",
+            "order": 16,
+            "isPreview": false
+          },
+          {
+            "id": "cn-3-7",
+            "title": "Address Resolution Protocol (ARP)",
+            "description": "Mapping logical IP addresses to physical MAC hardware addresses via ARP requests and replies.",
+            "videoUrl": "https://www.youtube.com/watch?v=IUSyV2BVh4A",
+            "youtubeVideoId": "IUSyV2BVh4A",
+            "author": "Gate Smashers",
+            "duration": "22 min",
+            "order": 17,
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "title": "Module 4 \u2014 Transport Layer Protocols",
+        "order": 4,
+        "lessons": [
+          {
+            "id": "cn-4-1",
+            "title": "TCP Protocol & 3-Way Handshake",
+            "description": "Connection establishment with SYN, SYN-ACK, ACK, sequence numbers, and graceful termination.",
+            "videoUrl": "https://www.youtube.com/watch?v=c8aet11HNxg",
+            "youtubeVideoId": "c8aet11HNxg",
+            "author": "Gate Smashers",
+            "duration": "28 min",
+            "order": 18,
+            "isPreview": false
+          },
+          {
+            "id": "cn-4-2",
+            "title": "UDP Protocol Header & Operations",
+            "description": "8-byte UDP lightweight header, connectionless datagram delivery, and low-latency streaming use cases.",
+            "videoUrl": "https://www.youtube.com/watch?v=HF_znV8x9a0",
+            "youtubeVideoId": "HF_znV8x9a0",
+            "author": "Gate Smashers",
+            "duration": "20 min",
+            "order": 19,
+            "isPreview": false
+          },
+          {
+            "id": "cn-4-3",
+            "title": "TCP vs UDP Key Differences",
+            "description": "Comparative analysis: reliability, ordering, header overhead, flow control, and speed.",
+            "videoUrl": "https://www.youtube.com/watch?v=jJyXpMmXJI0",
+            "youtubeVideoId": "jJyXpMmXJI0",
+            "author": "Gate Smashers",
+            "duration": "18 min",
+            "order": 20,
+            "isPreview": false
+          },
+          {
+            "id": "cn-4-4",
+            "title": "Flow Control & Sliding Window Protocols",
+            "description": "Stop-and-Wait, Go-Back-N, and Selective Repeat sliding window flow control mechanics.",
+            "videoUrl": "https://www.youtube.com/watch?v=yNedVgNyE8Q",
+            "youtubeVideoId": "yNedVgNyE8Q",
+            "author": "Gate Smashers",
+            "duration": "26 min",
+            "order": 21,
+            "isPreview": false
+          },
+          {
+            "id": "cn-4-5",
+            "title": "Congestion Control in TCP",
+            "description": "Slow start, congestion avoidance, fast retransmit, and fast recovery algorithms in TCP.",
+            "videoUrl": "https://www.youtube.com/watch?v=0bc_T_pEZmo",
+            "youtubeVideoId": "0bc_T_pEZmo",
+            "author": "Gate Smashers",
+            "duration": "24 min",
+            "order": 22,
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "title": "Module 5 \u2014 Application Layer Protocols",
+        "order": 5,
+        "lessons": [
+          {
+            "id": "cn-5-1",
+            "title": "Domain Name System (DNS) Architecture",
+            "description": "Hierarchical domain namespace, root servers, TLD, recursive resolvers, and DNS record types (A, CNAME, MX).",
+            "videoUrl": "https://www.youtube.com/watch?v=vhfRArT11jc",
+            "youtubeVideoId": "vhfRArT11jc",
+            "author": "Gate Smashers",
+            "duration": "25 min",
+            "order": 23,
+            "isPreview": false
+          },
+          {
+            "id": "cn-5-2",
+            "title": "HTTP and HTTPS Architecture",
+            "description": "Client-server requests, headers, methods, status codes, and TLS-encrypted HTTPS communication.",
+            "videoUrl": "https://www.youtube.com/watch?v=FmgIQBQ87fo",
+            "youtubeVideoId": "FmgIQBQ87fo",
+            "author": "Gate Smashers",
+            "duration": "22 min",
+            "order": 24,
+            "isPreview": false
+          },
+          {
+            "id": "cn-5-3",
+            "title": "FTP & Email Protocols (SMTP, POP3, IMAP)",
+            "description": "File Transfer Protocol control and data channels, plus mail transfer (SMTP) and retrieval (POP3/IMAP).",
+            "videoUrl": "https://www.youtube.com/watch?v=pnoWCK82apU",
+            "youtubeVideoId": "pnoWCK82apU",
+            "author": "Gate Smashers",
+            "duration": "26 min",
+            "order": 25,
+            "isPreview": false
+          },
+          {
+            "id": "cn-5-4",
+            "title": "Dynamic Host Configuration Protocol (DHCP)",
+            "description": "Automatic IP allocation through DORA process: Discover, Offer, Request, and Acknowledgment.",
+            "videoUrl": "https://www.youtube.com/watch?v=cyelJuJKfYA",
+            "youtubeVideoId": "cyelJuJKfYA",
+            "author": "Engineering Funda",
+            "duration": "20 min",
+            "order": 26,
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "title": "Module 6 \u2014 Network Security & Cryptography",
+        "order": 6,
+        "lessons": [
+          {
+            "id": "cn-6-1",
+            "title": "Cryptography: Symmetric & Asymmetric Encryption",
+            "description": "Private-key AES/DES versus public-key RSA cryptography, key distribution, and digital signatures.",
+            "videoUrl": "https://www.youtube.com/watch?v=6AmmQiOWoXM",
+            "youtubeVideoId": "6AmmQiOWoXM",
+            "author": "Gate Smashers",
+            "duration": "28 min",
+            "order": 27,
+            "isPreview": false
+          },
+          {
+            "id": "cn-6-2",
+            "title": "Firewalls & Packet Filtering",
+            "description": "Network perimeter security, stateless and stateful packet filtering firewalls, and security rule enforcement.",
+            "videoUrl": "https://www.youtube.com/watch?v=o_vyfo3Hw0Y",
+            "youtubeVideoId": "o_vyfo3Hw0Y",
+            "author": "Gate Smashers",
+            "duration": "25 min",
+            "order": 28,
+            "isPreview": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Artificial Intelligence \u2014 Fundamentals to Applications",
+    "category": "Artificial Intelligence",
+    "level": "Intermediate",
+    "description": "Structured academic path through Artificial Intelligence covering intelligent agents, state-space search, uninformed search (BFS, DFS, Uniform Cost Search), heuristic search (Greedy, A*), knowledge representation, propositional and first-order predicate logic, inference, machine learning fundamentals, and neural networks.",
+    "thumbnail": "/images/courses/artificial-intelligence.jpg",
+    "modules": [
+      {
+        "title": "Module 1 \u2014 AI Fundamentals & Problem Solving",
+        "order": 1,
+        "lessons": [
+          {
+            "id": "ai-1-1",
+            "title": "Introduction to Artificial Intelligence",
+            "description": "Defining AI, Turing test, rational agents, and broad problem-solving paradigms in computer science.",
+            "videoUrl": "https://www.youtube.com/watch?v=s-s9ilkMVj8",
+            "youtubeVideoId": "s-s9ilkMVj8",
+            "author": "Gate Smashers",
+            "duration": "20 min",
+            "order": 1,
+            "isPreview": true
+          },
+          {
+            "id": "ai-1-2",
+            "title": "Intelligent Agents & Environments",
+            "description": "Agent architectures, PEAS (Performance, Environment, Actuators, Sensors), and environment classifications.",
+            "videoUrl": "https://www.youtube.com/watch?v=BkedAnQfJ_U",
+            "youtubeVideoId": "BkedAnQfJ_U",
+            "author": "Gate Smashers",
+            "duration": "22 min",
+            "order": 2,
+            "isPreview": false
+          },
+          {
+            "id": "ai-1-3",
+            "title": "State Space Representation & Problem Formulation",
+            "description": "State space graphing, initial state, actions, transition model, goal test, and path cost formulations.",
+            "videoUrl": "https://www.youtube.com/watch?v=E5jVBqe59EE",
+            "youtubeVideoId": "E5jVBqe59EE",
+            "author": "Gate Smashers",
+            "duration": "24 min",
+            "order": 3,
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "title": "Module 2 \u2014 Uninformed Search Strategies",
+        "order": 2,
+        "lessons": [
+          {
+            "id": "ai-2-1",
+            "title": "Breadth First Search (BFS) in AI",
+            "description": "Queue-based level-order search: completeness, optimality, time and space complexity in state spaces.",
+            "videoUrl": "https://www.youtube.com/watch?v=qul0f79gxGs",
+            "youtubeVideoId": "qul0f79gxGs",
+            "author": "Gate Smashers",
+            "duration": "25 min",
+            "order": 4,
+            "isPreview": false
+          },
+          {
+            "id": "ai-2-2",
+            "title": "Depth First Search (DFS) in AI",
+            "description": "LIFO state exploration, back-tracking, depth limits, and cycle avoidance in complex problem spaces.",
+            "videoUrl": "https://www.youtube.com/watch?v=f8luGFRtshY",
+            "youtubeVideoId": "f8luGFRtshY",
+            "author": "Gate Smashers",
+            "duration": "23 min",
+            "order": 5,
+            "isPreview": false
+          },
+          {
+            "id": "ai-2-3",
+            "title": "Uniform Cost Search (UCS)",
+            "description": "Priority queue expansion by lowest cumulative path cost g(n) to guarantee optimal solutions.",
+            "videoUrl": "https://www.youtube.com/watch?v=w5Xawyfrf0s",
+            "youtubeVideoId": "w5Xawyfrf0s",
+            "author": "Gate Smashers",
+            "duration": "26 min",
+            "order": 6,
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "title": "Module 3 \u2014 Informed (Heuristic) Search",
+        "order": 3,
+        "lessons": [
+          {
+            "id": "ai-3-1",
+            "title": "Heuristic Search & Best-First Search",
+            "description": "Heuristic evaluation functions h(n) and Best-First Search algorithm mechanics.",
+            "videoUrl": "https://www.youtube.com/watch?v=7ffDUDjwz5E",
+            "youtubeVideoId": "7ffDUDjwz5E",
+            "author": "Gate Smashers",
+            "duration": "24 min",
+            "order": 7,
+            "isPreview": false
+          },
+          {
+            "id": "ai-3-2",
+            "title": "A* Search Algorithm",
+            "description": "Combining exact cost and heuristic estimate f(n) = g(n) + h(n), admissibility, and consistency.",
+            "videoUrl": "https://www.youtube.com/watch?v=tvAh0JZF2YE",
+            "youtubeVideoId": "tvAh0JZF2YE",
+            "author": "Gate Smashers",
+            "duration": "28 min",
+            "order": 8,
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "title": "Module 4 \u2014 Knowledge Representation & Logic",
+        "order": 4,
+        "lessons": [
+          {
+            "id": "ai-4-1",
+            "title": "Propositional Logic & Syntax",
+            "description": "Propositional statements, connectives, truth tables, tautologies, and satisfiability.",
+            "videoUrl": "https://www.youtube.com/watch?v=6490tKrGEic",
+            "youtubeVideoId": "6490tKrGEic",
+            "author": "Gate Smashers",
+            "duration": "26 min",
+            "order": 9,
+            "isPreview": false
+          },
+          {
+            "id": "ai-4-2",
+            "title": "First-Order Predicate Logic (FOL)",
+            "description": "Variables, constants, predicates, universal (\u2200) and existential (\u2203) quantifiers for formal knowledge bases.",
+            "videoUrl": "https://www.youtube.com/watch?v=Aw3EOSr64j0",
+            "youtubeVideoId": "Aw3EOSr64j0",
+            "author": "Gate Smashers",
+            "duration": "28 min",
+            "order": 10,
+            "isPreview": false
+          },
+          {
+            "id": "ai-4-3",
+            "title": "Inference and Resolution in Logic",
+            "description": "Clausal form, unification, resolution refutation, and automated theorem proving.",
+            "videoUrl": "https://www.youtube.com/watch?v=PW9vadATxW8",
+            "youtubeVideoId": "PW9vadATxW8",
+            "author": "Mahesh Huddar",
+            "duration": "25 min",
+            "order": 11,
+            "isPreview": false
+          },
+          {
+            "id": "ai-4-4",
+            "title": "Forward and Backward Chaining",
+            "description": "Data-driven forward chaining versus goal-directed backward reasoning in rule-based expert systems.",
+            "videoUrl": "https://www.youtube.com/watch?v=62ssjzQdzIs",
+            "youtubeVideoId": "62ssjzQdzIs",
+            "author": "5 Minutes Engineering",
+            "duration": "22 min",
+            "order": 12,
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "title": "Module 5 \u2014 Machine Learning Foundations",
+        "order": 5,
+        "lessons": [
+          {
+            "id": "ai-5-1",
+            "title": "Supervised vs Unsupervised Learning",
+            "description": "Comparing labeled regression and classification with unlabeled clustering and pattern recognition.",
+            "videoUrl": "https://www.youtube.com/watch?v=fM8XdC1EweU",
+            "youtubeVideoId": "fM8XdC1EweU",
+            "author": "Gate Smashers",
+            "duration": "22 min",
+            "order": 13,
+            "isPreview": false
+          },
+          {
+            "id": "ai-5-2",
+            "title": "Training, Testing & Overfitting",
+            "description": "Bias-variance tradeoff, cross-validation, regularization, and avoiding overfitting in predictive models.",
+            "videoUrl": "https://www.youtube.com/watch?v=ICCA3-7a5bw",
+            "youtubeVideoId": "ICCA3-7a5bw",
+            "author": "5 Minutes Engineering",
+            "duration": "20 min",
+            "order": 14,
+            "isPreview": false
+          },
+          {
+            "id": "ai-5-3",
+            "title": "Model Evaluation & Confusion Matrix",
+            "description": "Calculating accuracy, precision, recall, specificity, and F1-score from confusion matrices.",
+            "videoUrl": "https://www.youtube.com/watch?v=PANwXKeyoP0",
+            "youtubeVideoId": "PANwXKeyoP0",
+            "author": "Gate Smashers",
+            "duration": "24 min",
+            "order": 15,
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "title": "Module 6 \u2014 Modern AI & Deep Learning",
+        "order": 6,
+        "lessons": [
+          {
+            "id": "ai-6-1",
+            "title": "Artificial Neural Networks & Perceptrons",
+            "description": "Single-layer perceptron, activation functions (Sigmoid, ReLU), and multi-layer feedforward networks.",
+            "videoUrl": "https://www.youtube.com/watch?v=o7n9OcvcHVY",
+            "youtubeVideoId": "o7n9OcvcHVY",
+            "author": "Gate Smashers",
+            "duration": "28 min",
+            "order": 16,
+            "isPreview": false
+          },
+          {
+            "id": "ai-6-2",
+            "title": "Deep Learning & Backpropagation",
+            "description": "Gradient descent optimization, weight update equations, and backpropagation in deep architectures.",
+            "videoUrl": "https://www.youtube.com/watch?v=ayOOMlgb320",
+            "youtubeVideoId": "ayOOMlgb320",
+            "author": "Simplilearn",
+            "duration": "30 min",
+            "order": 17,
+            "isPreview": false
+          },
+          {
+            "id": "ai-6-3",
+            "title": "Large Language Models & Generative AI",
+            "description": "Transformer architecture, attention mechanisms, token embeddings, and foundation models.",
+            "videoUrl": "https://www.youtube.com/watch?v=7gMg98Hf3uM",
+            "youtubeVideoId": "7gMg98Hf3uM",
+            "author": "IBM Technology",
+            "duration": "26 min",
+            "order": 18,
+            "isPreview": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Data Science \u2014 Complete Learning Path",
+    "category": "Data Science",
+    "level": "Intermediate",
+    "description": "Complete practical data science track: Data science fundamentals, Python scientific stack, NumPy numerical arrays, Pandas data wrangling, exploratory data analysis, statistics, Matplotlib & Seaborn visualizations, Scikit-learn machine learning, cross-validation, and project deployment.",
+    "thumbnail": "/images/courses/data-science.jpg",
+    "modules": [
+      {
+        "title": "Module 1 \u2014 Introduction to Data Science",
+        "order": 1,
+        "lessons": [
+          {
+            "id": "ds-1-1",
+            "title": "What is Data Science? Overview & Roadmap",
+            "description": "Industry overview, the data science mindset, key roles, and skills required for end-to-end data products.",
+            "videoUrl": "https://www.youtube.com/watch?v=rEWPqw6rMGI",
+            "youtubeVideoId": "rEWPqw6rMGI",
+            "author": "Ken Jee",
+            "duration": "20 min",
+            "order": 1,
+            "isPreview": true
+          },
+          {
+            "id": "ds-1-2",
+            "title": "The Data Science Lifecycle & Workflow",
+            "description": "CRISP-DM standard: Problem definition, data acquisition, preparation, modeling, evaluation, and rollout.",
+            "videoUrl": "https://www.youtube.com/watch?v=iqLVF5T_-Qk",
+            "youtubeVideoId": "iqLVF5T_-Qk",
+            "author": "IDEAS",
+            "duration": "22 min",
+            "order": 2,
+            "isPreview": false
+          },
+          {
+            "id": "ds-1-3",
+            "title": "Types of Data & Data Collection Strategies",
+            "description": "Structured, semi-structured, unstructured data, numerical vs categorical, and ingestion pipelines.",
+            "videoUrl": "https://www.youtube.com/watch?v=x--w92bBYeM",
+            "youtubeVideoId": "x--w92bBYeM",
+            "author": "Tech Classes",
+            "duration": "18 min",
+            "order": 3,
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "title": "Module 2 \u2014 Python for Data Science",
+        "order": 2,
+        "lessons": [
+          {
+            "id": "ds-2-1",
+            "title": "NumPy for Scientific Computing",
+            "description": "N-dimensional arrays, vectorization, broadcasting, linear algebra, and mathematical operations.",
+            "videoUrl": "https://www.youtube.com/watch?v=QUT1VHiLmmI",
+            "youtubeVideoId": "QUT1VHiLmmI",
+            "author": "freeCodeCamp.org",
+            "duration": "35 min",
+            "order": 4,
+            "isPreview": false
+          },
+          {
+            "id": "ds-2-2",
+            "title": "Pandas Series & DataFrames",
+            "description": "Tabular data structures, indexing, filtering, grouping, aggregation, and DataFrame manipulation.",
+            "videoUrl": "https://www.youtube.com/watch?v=gtjxAH8uaP0",
+            "youtubeVideoId": "gtjxAH8uaP0",
+            "author": "freeCodeCamp.org",
+            "duration": "40 min",
+            "order": 5,
+            "isPreview": false
+          },
+          {
+            "id": "ds-2-3",
+            "title": "Data Wrangling & Cleaning with Pandas",
+            "description": "Handling duplicate records, data type conversions, string operations, and restructuring messy datasets.",
+            "videoUrl": "https://www.youtube.com/watch?v=bDhvCp3_lYw",
+            "youtubeVideoId": "bDhvCp3_lYw",
+            "author": "Alex The Analyst",
+            "duration": "28 min",
+            "order": 6,
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "title": "Module 3 \u2014 Exploratory Data Analysis (EDA)",
+        "order": 3,
+        "lessons": [
+          {
+            "id": "ds-3-1",
+            "title": "Descriptive Statistics & Summary Measures",
+            "description": "Measures of central tendency (mean, median, mode), spread (variance, standard deviation, IQR), and skewness.",
+            "videoUrl": "https://www.youtube.com/watch?v=7n9kSxorsMU",
+            "youtubeVideoId": "7n9kSxorsMU",
+            "author": "Andrea Jones-Rooy",
+            "duration": "25 min",
+            "order": 7,
+            "isPreview": false
+          },
+          {
+            "id": "ds-3-2",
+            "title": "Detecting & Handling Missing Values",
+            "description": "Imputation techniques (mean, median, KNN, forward-fill) vs deletion for null data points.",
+            "videoUrl": "https://www.youtube.com/watch?v=mkXmV9WB5fo",
+            "youtubeVideoId": "mkXmV9WB5fo",
+            "author": "Analytics With Rajat",
+            "duration": "22 min",
+            "order": 8,
+            "isPreview": false
+          },
+          {
+            "id": "ds-3-3",
+            "title": "Outlier Detection and Handling Techniques",
+            "description": "Identifying anomalous observations using Z-score, Boxplot IQR bounds, and isolation forests.",
+            "videoUrl": "https://www.youtube.com/watch?v=OS9xRGKfx4E",
+            "youtubeVideoId": "OS9xRGKfx4E",
+            "author": "Krish Naik",
+            "duration": "24 min",
+            "order": 9,
+            "isPreview": false
+          },
+          {
+            "id": "ds-3-4",
+            "title": "Correlation Analysis & Feature Relationships",
+            "description": "Pearson and Spearman correlation matrices, heatmap plotting, and multicollinearity detection.",
+            "videoUrl": "https://www.youtube.com/watch?v=NOIq3dl0mO0",
+            "youtubeVideoId": "NOIq3dl0mO0",
+            "author": "Mathew K Analytics",
+            "duration": "20 min",
+            "order": 10,
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "title": "Module 4 \u2014 Data Visualization",
+        "order": 4,
+        "lessons": [
+          {
+            "id": "ds-4-1",
+            "title": "Data Visualization with Matplotlib",
+            "description": "Line charts, histograms, subplots, formatting axes, and figure export using Matplotlib.",
+            "videoUrl": "https://www.youtube.com/watch?v=r-uOLxNrNk8",
+            "youtubeVideoId": "r-uOLxNrNk8",
+            "author": "freeCodeCamp.org",
+            "duration": "35 min",
+            "order": 11,
+            "isPreview": false
+          },
+          {
+            "id": "ds-4-2",
+            "title": "Statistical Graphics with Seaborn",
+            "description": "Pairplots, distribution KDE plots, violin plots, and categorical charts with Seaborn.",
+            "videoUrl": "https://www.youtube.com/watch?v=MyhBYkWarBE",
+            "youtubeVideoId": "MyhBYkWarBE",
+            "author": "Greg Hogg",
+            "duration": "28 min",
+            "order": 12,
+            "isPreview": false
+          },
+          {
+            "id": "ds-4-3",
+            "title": "Interactive Visualizations with Plotly",
+            "description": "Building zoomable, interactive charts and web dashboards with Plotly Express.",
+            "videoUrl": "https://www.youtube.com/watch?v=iVd_s2bn1jY",
+            "youtubeVideoId": "iVd_s2bn1jY",
+            "author": "Mathew K Analytics",
+            "duration": "26 min",
+            "order": 13,
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "title": "Module 5 \u2014 Machine Learning with Scikit-Learn",
+        "order": 5,
+        "lessons": [
+          {
+            "id": "ds-5-1",
+            "title": "Linear Regression & Gradient Descent",
+            "description": "Cost function optimization, simple and multiple linear regression using Scikit-Learn.",
+            "videoUrl": "https://www.youtube.com/watch?v=8jazNUpO3lQ",
+            "youtubeVideoId": "8jazNUpO3lQ",
+            "author": "codebasics",
+            "duration": "30 min",
+            "order": 14,
+            "isPreview": false
+          },
+          {
+            "id": "ds-5-2",
+            "title": "Classification: Logistic Regression & Decision Trees",
+            "description": "Binary classification, sigmoid mapping, decision tree splits, and classification metrics.",
+            "videoUrl": "https://www.youtube.com/watch?v=aL21Y-u0SRs",
+            "youtubeVideoId": "aL21Y-u0SRs",
+            "author": "Ryan & Matt Data Science",
+            "duration": "32 min",
+            "order": 15,
+            "isPreview": false
+          },
+          {
+            "id": "ds-5-3",
+            "title": "K-Means Clustering Unsupervised Learning",
+            "description": "Centroid-based clustering, inertia, elbow method, and silhouette score for grouping data.",
+            "videoUrl": "https://www.youtube.com/watch?v=KYD6zqWxm8o",
+            "youtubeVideoId": "KYD6zqWxm8o",
+            "author": "ProgrammingKnowledge",
+            "duration": "26 min",
+            "order": 16,
+            "isPreview": false
+          },
+          {
+            "id": "ds-5-4",
+            "title": "Train-Test Split & K-Fold Cross Validation",
+            "description": "Splitting datasets, stratified folds, and preventing data leakage during model training.",
+            "videoUrl": "https://www.youtube.com/watch?v=SjOfbbfI2qY",
+            "youtubeVideoId": "SjOfbbfI2qY",
+            "author": "Ryan & Matt Data Science",
+            "duration": "24 min",
+            "order": 17,
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "title": "Module 6 \u2014 Model Evaluation & Performance Tuning",
+        "order": 6,
+        "lessons": [
+          {
+            "id": "ds-6-1",
+            "title": "Confusion Matrix, Precision, Recall & F1-Score",
+            "description": "Evaluating classification models under imbalanced class distributions with precision-recall tradeoffs.",
+            "videoUrl": "https://www.youtube.com/watch?v=_CGTbkHwUHQ",
+            "youtubeVideoId": "_CGTbkHwUHQ",
+            "author": "Mahesh Huddar",
+            "duration": "22 min",
+            "order": 18,
+            "isPreview": false
+          },
+          {
+            "id": "ds-6-2",
+            "title": "ROC Curves & AUC Score Explained",
+            "description": "Plotting true positive rate vs false positive rate across thresholds and calculating Area Under Curve.",
+            "videoUrl": "https://www.youtube.com/watch?v=egTNM8NSa2k",
+            "youtubeVideoId": "egTNM8NSa2k",
+            "author": "Terry Shaneyfelt",
+            "duration": "20 min",
+            "order": 19,
+            "isPreview": false
+          },
+          {
+            "id": "ds-6-3",
+            "title": "Hyperparameter Optimization with GridSearchCV",
+            "description": "Automated tuning of model hyperparameters using exhaustive grid search and cross-validation.",
+            "videoUrl": "https://www.youtube.com/watch?v=eZ98q7iOUAA",
+            "youtubeVideoId": "eZ98q7iOUAA",
+            "author": "NeuralNine",
+            "duration": "25 min",
+            "order": 20,
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "title": "Module 7 \u2014 End-to-End Data Science Project",
+        "order": 7,
+        "lessons": [
+          {
+            "id": "ds-7-1",
+            "title": "Building an End-to-End Machine Learning Model",
+            "description": "Full pipeline: Raw data ingestion, preprocessing pipeline, model training, and serializing with Joblib.",
+            "videoUrl": "https://www.youtube.com/watch?v=JxgmHe2NyeY",
+            "youtubeVideoId": "JxgmHe2NyeY",
+            "author": "Krish Naik",
+            "duration": "35 min",
+            "order": 21,
+            "isPreview": false
+          },
+          {
+            "id": "ds-7-2",
+            "title": "Deploying Machine Learning Models with Streamlit",
+            "description": "Creating an interactive web application UI for user inference using Streamlit in Python.",
+            "videoUrl": "https://www.youtube.com/watch?v=WLwjvWq0GWA",
+            "youtubeVideoId": "WLwjvWq0GWA",
+            "author": "Siddhardhan",
+            "duration": "28 min",
+            "order": 22,
+            "isPreview": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Data Mining \u2014 Concepts and Algorithms",
+    "category": "Data Mining",
+    "level": "Intermediate",
+    "description": "Comprehensive curriculum on data mining and knowledge discovery: KDD process, data preprocessing, association rule mining (Apriori, FP-Growth), classification algorithms (Decision Tree, ID3, Naive Bayes, KNN), cluster analysis (K-Means, Hierarchical, DBSCAN), and market basket analysis.",
+    "thumbnail": "/images/courses/data-mining.jpg",
+    "modules": [
+      {
+        "title": "Module 1 \u2014 Fundamentals of Data Mining",
+        "order": 1,
+        "lessons": [
+          {
+            "id": "dm-1-1",
+            "title": "Introduction to Data Mining Concepts",
+            "description": "Defining data mining, data warehouse integration, analytical processing vs transaction systems.",
+            "videoUrl": "https://www.youtube.com/watch?v=z6t_hFDtvew",
+            "youtubeVideoId": "z6t_hFDtvew",
+            "author": "Perfect Computer Engineer",
+            "duration": "20 min",
+            "order": 1,
+            "isPreview": true
+          },
+          {
+            "id": "dm-1-2",
+            "title": "The KDD Process (Knowledge Discovery in Databases)",
+            "description": "Selection, preprocessing, transformation, data mining, interpretation, and evaluation stages.",
+            "videoUrl": "https://www.youtube.com/watch?v=U-hUnxuaw7w",
+            "youtubeVideoId": "U-hUnxuaw7w",
+            "author": "RANJI RAJ",
+            "duration": "22 min",
+            "order": 2,
+            "isPreview": false
+          },
+          {
+            "id": "dm-1-3",
+            "title": "Data Preprocessing: Cleaning, Integration & Transformation",
+            "description": "Handling noisy data, data binning, min-max normalization, z-score standardization, and discretization.",
+            "videoUrl": "https://www.youtube.com/watch?v=tDu_KIlXaB0",
+            "youtubeVideoId": "tDu_KIlXaB0",
+            "author": "Gate Smashers",
+            "duration": "26 min",
+            "order": 3,
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "title": "Module 2 \u2014 Association Rule Mining",
+        "order": 2,
+        "lessons": [
+          {
+            "id": "dm-2-1",
+            "title": "Association Rules: Support, Confidence & Lift",
+            "description": "Mathematical metrics for association mining: calculating Support, Confidence, and Lift from itemsets.",
+            "videoUrl": "https://www.youtube.com/watch?v=4QLCYPceCwc",
+            "youtubeVideoId": "4QLCYPceCwc",
+            "author": "Er Sahil ka Gyan",
+            "duration": "24 min",
+            "order": 4,
+            "isPreview": false
+          },
+          {
+            "id": "dm-2-2",
+            "title": "Apriori Algorithm with Step-by-Step Example",
+            "description": "Downward closure property, candidate generation, pruning, and frequent itemset discovery.",
+            "videoUrl": "https://www.youtube.com/watch?v=o_hnNBM0jtk",
+            "youtubeVideoId": "o_hnNBM0jtk",
+            "author": "Gate Smashers",
+            "duration": "28 min",
+            "order": 5,
+            "isPreview": false
+          },
+          {
+            "id": "dm-2-3",
+            "title": "FP-Growth Algorithm (Frequent Pattern Tree)",
+            "description": "Frequent pattern tree construction and mining without candidate generation.",
+            "videoUrl": "https://www.youtube.com/watch?v=kK6yRznGTdo",
+            "youtubeVideoId": "kK6yRznGTdo",
+            "author": "Mahesh Huddar",
+            "duration": "26 min",
+            "order": 6,
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "title": "Module 3 \u2014 Classification Techniques",
+        "order": 3,
+        "lessons": [
+          {
+            "id": "dm-3-1",
+            "title": "Decision Tree Induction & ID3 Algorithm",
+            "description": "Information gain, entropy calculations, attribute selection, and decision tree construction.",
+            "videoUrl": "https://www.youtube.com/watch?v=CWzpomtLqqs",
+            "youtubeVideoId": "CWzpomtLqqs",
+            "author": "Gate Smashers",
+            "duration": "28 min",
+            "order": 7,
+            "isPreview": false
+          },
+          {
+            "id": "dm-3-2",
+            "title": "Bayesian Classification & Naive Bayes Theorem",
+            "description": "Posterior probability, prior probabilities, likelihood estimation, and Naive Bayes conditional independence.",
+            "videoUrl": "https://www.youtube.com/watch?v=xXeoWE4KmmY",
+            "youtubeVideoId": "xXeoWE4KmmY",
+            "author": "Er Sahil ka Gyan",
+            "duration": "24 min",
+            "order": 8,
+            "isPreview": false
+          },
+          {
+            "id": "dm-3-3",
+            "title": "K-Nearest Neighbors (KNN) Classifier",
+            "description": "Instance-based lazy learning, distance metrics (Euclidean, Manhattan), and majority voting.",
+            "videoUrl": "https://www.youtube.com/watch?v=CJjSPCslxqQ",
+            "youtubeVideoId": "CJjSPCslxqQ",
+            "author": "5 Minutes Engineering",
+            "duration": "22 min",
+            "order": 9,
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "title": "Module 4 \u2014 Cluster Analysis",
+        "order": 4,
+        "lessons": [
+          {
+            "id": "dm-4-1",
+            "title": "Overview of Clustering & Clustering Methods",
+            "description": "Unsupervised partitioning vs hierarchical paradigms and cluster similarity criteria.",
+            "videoUrl": "https://www.youtube.com/watch?v=c8yiJq1do38",
+            "youtubeVideoId": "c8yiJq1do38",
+            "author": "Gate Smashers",
+            "duration": "22 min",
+            "order": 10,
+            "isPreview": false
+          },
+          {
+            "id": "dm-4-2",
+            "title": "K-Means Partitioning Algorithm",
+            "description": "Centroid initialization, iterative distance assignment, convergence testing, and step-by-step numerical example.",
+            "videoUrl": "https://www.youtube.com/watch?v=KzJORp8bgqs",
+            "youtubeVideoId": "KzJORp8bgqs",
+            "author": "Mahesh Huddar",
+            "duration": "26 min",
+            "order": 11,
+            "isPreview": false
+          },
+          {
+            "id": "dm-4-3",
+            "title": "Hierarchical Clustering: Agglomerative vs Divisive",
+            "description": "Bottom-up merging versus top-down splitting, dendrogram interpretation, and linkage criteria.",
+            "videoUrl": "https://www.youtube.com/watch?v=zxQF8Rmpk1M",
+            "youtubeVideoId": "zxQF8Rmpk1M",
+            "author": "Gate Smashers",
+            "duration": "25 min",
+            "order": 12,
+            "isPreview": false
+          },
+          {
+            "id": "dm-4-4",
+            "title": "DBSCAN: Density-Based Spatial Clustering",
+            "description": "Core points, border points, noise identification, epsilon radius, and MinPts thresholding.",
+            "videoUrl": "https://www.youtube.com/watch?v=gFS_zmgvW_c",
+            "youtubeVideoId": "gFS_zmgvW_c",
+            "author": "Gate Smashers",
+            "duration": "28 min",
+            "order": 13,
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "title": "Module 5 \u2014 Pattern Mining & Sequential Patterns",
+        "order": 5,
+        "lessons": [
+          {
+            "id": "dm-5-1",
+            "title": "Sequential Pattern Mining Concepts",
+            "description": "Mining ordered itemset sequences across time-series and transaction logs.",
+            "videoUrl": "https://www.youtube.com/watch?v=lQBgV-0UB-I",
+            "youtubeVideoId": "lQBgV-0UB-I",
+            "author": "Boring Coding University",
+            "duration": "24 min",
+            "order": 14,
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "title": "Module 6 \u2014 Real-World Data Mining Applications",
+        "order": 6,
+        "lessons": [
+          {
+            "id": "dm-6-1",
+            "title": "Market Basket Analysis & Recommender Systems",
+            "description": "Real-world retail basket association mining and item recommendation rule generation.",
+            "videoUrl": "https://www.youtube.com/watch?v=zsgVjGGDACU",
+            "youtubeVideoId": "zsgVjGGDACU",
+            "author": "Gate Smashers",
+            "duration": "24 min",
+            "order": 15,
+            "isPreview": false
+          },
+          {
+            "id": "dm-6-2",
+            "title": "Outlier Detection & Anomaly Mining",
+            "description": "Statistical, distance-based, and density-based techniques for detecting fraudulent and anomalous data.",
+            "videoUrl": "https://www.youtube.com/watch?v=jhqLc50MpTI",
+            "youtubeVideoId": "jhqLc50MpTI",
+            "author": "Gate Smashers",
+            "duration": "22 min",
+            "order": 16,
+            "isPreview": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Microprocessor Fundamentals",
+    "category": "Microprocessors",
+    "level": "Intermediate",
+    "description": "Dedicated engineering course on Microprocessor systems: Intel 8085 architecture, pin diagram and signals, registers, status flags, ALU, addressing modes, 8085 instruction set, assembly language programming, hardware/software interrupts, machine cycles, and memory/IO interfacing.",
+    "thumbnail": "/images/courses/microprocessor.jpg",
+    "modules": [
+      {
+        "title": "Module 1 \u2014 Introduction to Microprocessors",
+        "order": 1,
+        "lessons": [
+          {
+            "id": "mp-1-1",
+            "title": "Microprocessor vs Microcontroller Differences",
+            "description": "Contrasting general-purpose microprocessors with integrated microcontrollers (memory, peripherals, applications).",
+            "videoUrl": "https://www.youtube.com/watch?v=SBh6dJMM6AI",
+            "youtubeVideoId": "SBh6dJMM6AI",
+            "author": "Gate Smashers",
+            "duration": "20 min",
+            "order": 1,
+            "isPreview": true
+          },
+          {
+            "id": "mp-1-2",
+            "title": "CPU Architecture & System Buses (Address, Data, Control)",
+            "description": "System bus architecture: unidirectional 16-bit address bus, bidirectional 8-bit data bus, and control signals.",
+            "videoUrl": "https://www.youtube.com/watch?v=xBYhHC8_A6o",
+            "youtubeVideoId": "xBYhHC8_A6o",
+            "author": "Gate Smashers",
+            "duration": "22 min",
+            "order": 2,
+            "isPreview": false
+          },
+          {
+            "id": "mp-1-3",
+            "title": "Introduction to 8085 Microprocessor",
+            "description": "Historical background, technology specifications, and functional overview of the Intel 8085 chip.",
+            "videoUrl": "https://www.youtube.com/watch?v=rjnDD0f6vMY",
+            "youtubeVideoId": "rjnDD0f6vMY",
+            "author": "Gate Smashers",
+            "duration": "24 min",
+            "order": 3,
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "title": "Module 2 \u2014 8085 Architecture & Functional Blocks",
+        "order": 2,
+        "lessons": [
+          {
+            "id": "mp-2-1",
+            "title": "Intel 8085 Internal Architecture",
+            "description": "Internal bus layout, registers, arithmetic logic unit, temporary registers, and control unit.",
+            "videoUrl": "https://www.youtube.com/watch?v=w2oXhH02GSU",
+            "youtubeVideoId": "w2oXhH02GSU",
+            "author": "Gate Smashers",
+            "duration": "28 min",
+            "order": 4,
+            "isPreview": false
+          },
+          {
+            "id": "mp-2-2",
+            "title": "8085 Pin Diagram & Signal Functions",
+            "description": "40-pin DIP layout: multiplexed AD0-AD7, address lines A8-A15, status lines, clock, and reset signals.",
+            "videoUrl": "https://www.youtube.com/watch?v=llh4rkvj2OA",
+            "youtubeVideoId": "llh4rkvj2OA",
+            "author": "Gate Smashers",
+            "duration": "26 min",
+            "order": 5,
+            "isPreview": false
+          },
+          {
+            "id": "mp-2-3",
+            "title": "General Purpose Registers & Accumulator",
+            "description": "Accumulator (A), B, C, D, E, H, L registers, register pairs (BC, DE, HL), Stack Pointer, and Program Counter.",
+            "videoUrl": "https://www.youtube.com/watch?v=-qyM8XJVnxg",
+            "youtubeVideoId": "-qyM8XJVnxg",
+            "author": "Neso Academy",
+            "duration": "24 min",
+            "order": 6,
+            "isPreview": false
+          },
+          {
+            "id": "mp-2-4",
+            "title": "ALU and Flag Register Status Bits",
+            "description": "Sign (S), Zero (Z), Auxiliary Carry (AC), Parity (P), and Carry (CY) flag bit conditions and ALU operations.",
+            "videoUrl": "https://www.youtube.com/watch?v=rlcBbFa9A6M",
+            "youtubeVideoId": "rlcBbFa9A6M",
+            "author": "Gate Smashers",
+            "duration": "22 min",
+            "order": 7,
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "title": "Module 3 \u2014 8085 Instruction Set & Addressing Modes",
+        "order": 3,
+        "lessons": [
+          {
+            "id": "mp-3-1",
+            "title": "Addressing Modes in 8085",
+            "description": "Direct, Immediate, Register, Register Indirect, and Implied addressing modes with practical examples.",
+            "videoUrl": "https://www.youtube.com/watch?v=vkNVBai9Ciw",
+            "youtubeVideoId": "vkNVBai9Ciw",
+            "author": "Gate Smashers",
+            "duration": "25 min",
+            "order": 8,
+            "isPreview": false
+          },
+          {
+            "id": "mp-3-2",
+            "title": "Data Transfer Instructions (MOV, MVI, LXI, LDA, STA)",
+            "description": "Moving bytes between registers and memory without modifying arithmetic flag registers.",
+            "videoUrl": "https://www.youtube.com/watch?v=pi0tAfj8gyM",
+            "youtubeVideoId": "pi0tAfj8gyM",
+            "author": "5 Minutes Engineering",
+            "duration": "22 min",
+            "order": 9,
+            "isPreview": false
+          },
+          {
+            "id": "mp-3-3",
+            "title": "Arithmetic Instructions (ADD, SUB, INR, DCR)",
+            "description": "Binary addition, subtraction with borrow, increment, decrement, and Decimal Adjust Accumulator (DAA).",
+            "videoUrl": "https://www.youtube.com/watch?v=YTLfNcWfeOE",
+            "youtubeVideoId": "YTLfNcWfeOE",
+            "author": "Engineering Funda",
+            "duration": "26 min",
+            "order": 10,
+            "isPreview": false
+          },
+          {
+            "id": "mp-3-4",
+            "title": "Logical and Branch Instructions (JMP, CALL, RET)",
+            "description": "Boolean AND/OR/XOR operations, unconditional and conditional jumps, subroutines (CALL, RET).",
+            "videoUrl": "https://www.youtube.com/watch?v=yu5ovUbPC0I",
+            "youtubeVideoId": "yu5ovUbPC0I",
+            "author": "Gate Smashers",
+            "duration": "24 min",
+            "order": 11,
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "title": "Module 4 \u2014 Assembly Language Programming",
+        "order": 4,
+        "lessons": [
+          {
+            "id": "mp-4-1",
+            "title": "8-Bit and 16-Bit Arithmetic Operations",
+            "description": "Writing complete assembly programs for multi-byte addition, subtraction, and hex conversions.",
+            "videoUrl": "https://www.youtube.com/watch?v=GLfEQGY70Ek",
+            "youtubeVideoId": "GLfEQGY70Ek",
+            "author": "Scratch Learners",
+            "duration": "25 min",
+            "order": 12,
+            "isPreview": false
+          },
+          {
+            "id": "mp-4-2",
+            "title": "Loops, Counters and Software Delays",
+            "description": "Implementing counting loops, register decrementing, and calculating precise millisecond time delays.",
+            "videoUrl": "https://www.youtube.com/watch?v=IEa0dyJfv30",
+            "youtubeVideoId": "IEa0dyJfv30",
+            "author": "Ekeeda",
+            "duration": "22 min",
+            "order": 13,
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "title": "Module 5 \u2014 Interrupts & Machine Cycles",
+        "order": 5,
+        "lessons": [
+          {
+            "id": "mp-5-1",
+            "title": "Interrupt Architecture (TRAP, RST 7.5, 6.5, 5.5, INTR)",
+            "description": "Vectored vs non-vectored interrupts, maskable vs non-maskable (TRAP), and SIM/RIM control words.",
+            "videoUrl": "https://www.youtube.com/watch?v=1aG3aFEKxyA",
+            "youtubeVideoId": "1aG3aFEKxyA",
+            "author": "Gate Smashers",
+            "duration": "28 min",
+            "order": 14,
+            "isPreview": false
+          },
+          {
+            "id": "mp-5-2",
+            "title": "Hardware vs Software Interrupts & Priority",
+            "description": "Priority resolution order, RST instructions, interrupt service routines, and interrupt acknowledge cycles.",
+            "videoUrl": "https://www.youtube.com/watch?v=CaqCbX4BA_k",
+            "youtubeVideoId": "CaqCbX4BA_k",
+            "author": "THINK TECHNICAL",
+            "duration": "20 min",
+            "order": 15,
+            "isPreview": false
+          },
+          {
+            "id": "mp-5-3",
+            "title": "8085 Machine Cycles & Timing Diagrams",
+            "description": "Opcode fetch (4T), Memory Read (3T), Memory Write (3T), I/O Read/Write cycles, and T-state timing.",
+            "videoUrl": "https://www.youtube.com/watch?v=vkwwDwgEjYQ",
+            "youtubeVideoId": "vkwwDwgEjYQ",
+            "author": "Electronics for You",
+            "duration": "26 min",
+            "order": 16,
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "title": "Module 6 \u2014 Interfacing with Memory & I/O",
+        "order": 6,
+        "lessons": [
+          {
+            "id": "mp-6-1",
+            "title": "Memory Interfacing Concepts with 8085",
+            "description": "Address decoding (74LS138 decoder), memory mapping (absolute vs partial decoding), and ROM/RAM integration.",
+            "videoUrl": "https://www.youtube.com/watch?v=sa8QCHIGZM8",
+            "youtubeVideoId": "sa8QCHIGZM8",
+            "author": "Engineering Funda",
+            "duration": "28 min",
+            "order": 17,
+            "isPreview": false
+          },
+          {
+            "id": "mp-6-2",
+            "title": "I/O Ports & 8255 Programmable Peripheral Interface",
+            "description": "8255 PPI architecture: Port A, Port B, Port C, Control Word Register, and BSR/I/O operating modes.",
+            "videoUrl": "https://www.youtube.com/watch?v=JCAjbuvvXbA",
+            "youtubeVideoId": "JCAjbuvvXbA",
+            "author": "Engineering Funda",
+            "duration": "30 min",
+            "order": 18,
+            "isPreview": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Design and Analysis of Algorithms \u2014 Complete Course",
+    "category": "Algorithms",
+    "level": "Advanced",
+    "description": "The premier academic algorithms curriculum based on Abdul Bari's renowned lectures: algorithm complexity analysis, asymptotic notation (Big O, Omega, Theta), recurrence relations and Master method, divide and conquer (binary search, merge sort, quick sort), greedy method (knapsack, job sequencing, MST, Dijkstra), dynamic programming (0/1 knapsack, matrix chain multiplication, LCS, Floyd-Warshall), graph algorithms (BFS, DFS), backtracking (N-Queens, graph coloring), and branch and bound (TSP, 15-puzzle).",
+    "thumbnail": "/images/courses/daa.jpg",
+    "modules": [
+      {
+        "title": "Module 1 \u2014 Algorithm Fundamentals & Asymptotics",
+        "order": 1,
+        "lessons": [
+          {
+            "id": "daa-1-1",
+            "title": "What is an Algorithm & Performance Analysis",
+            "description": "Algorithm definition, space complexity, time complexity, and step count method.",
+            "videoUrl": "https://www.youtube.com/watch?v=0IAPZzGSbME",
+            "youtubeVideoId": "0IAPZzGSbME",
+            "author": "Abdul Bari",
+            "duration": "25 min",
+            "order": 1,
+            "isPreview": true
+          },
+          {
+            "id": "daa-1-2",
+            "title": "Asymptotic Notations: Big O, Omega, Theta",
+            "description": "Mathematical limits for upper bound (Big O), lower bound (Omega), and tight bound (Theta).",
+            "videoUrl": "https://www.youtube.com/watch?v=A03oI0znAoc",
+            "youtubeVideoId": "A03oI0znAoc",
+            "author": "Abdul Bari",
+            "duration": "28 min",
+            "order": 2,
+            "isPreview": false
+          },
+          {
+            "id": "daa-1-3",
+            "title": "Recurrence Relations & Master Theorem",
+            "description": "Solving recurrence relations using Master Theorem cases for dividing functions.",
+            "videoUrl": "https://www.youtube.com/watch?v=OynWkEj0S-s",
+            "youtubeVideoId": "OynWkEj0S-s",
+            "author": "Abdul Bari",
+            "duration": "30 min",
+            "order": 3,
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "title": "Module 2 \u2014 Divide and Conquer",
+        "order": 2,
+        "lessons": [
+          {
+            "id": "daa-2-1",
+            "title": "Divide and Conquer Paradigm",
+            "description": "General divide and conquer framework: dividing problem instances, recursive conquering, and recombining.",
+            "videoUrl": "https://www.youtube.com/watch?v=2Rr2tW9zvRg",
+            "youtubeVideoId": "2Rr2tW9zvRg",
+            "author": "Abdul Bari",
+            "duration": "24 min",
+            "order": 4,
+            "isPreview": false
+          },
+          {
+            "id": "daa-2-2",
+            "title": "Binary Search Algorithm & Complexity",
+            "description": "Binary search on sorted arrays, iterative vs recursive implementations, and O(log n) analysis.",
+            "videoUrl": "https://www.youtube.com/watch?v=V_T5NuccwRA",
+            "youtubeVideoId": "V_T5NuccwRA",
+            "author": "Jenny's Lectures CS IT",
+            "duration": "25 min",
+            "order": 5,
+            "isPreview": false
+          },
+          {
+            "id": "daa-2-3",
+            "title": "Merge Sort Algorithm & Analysis",
+            "description": "Merge sort recursive breakdown, 2-way merging logic, recurrence tree, and stable O(n log n) time.",
+            "videoUrl": "https://www.youtube.com/watch?v=mB5HXBb_HY8",
+            "youtubeVideoId": "mB5HXBb_HY8",
+            "author": "Abdul Bari",
+            "duration": "32 min",
+            "order": 6,
+            "isPreview": false
+          },
+          {
+            "id": "daa-2-4",
+            "title": "Quick Sort Algorithm & Partitioning",
+            "description": "Lomuto/Hoare pivot partitioning, worst case O(n^2), average case O(n log n), and randomized pivot selection.",
+            "videoUrl": "https://www.youtube.com/watch?v=7h1s2SojIRw",
+            "youtubeVideoId": "7h1s2SojIRw",
+            "author": "Abdul Bari",
+            "duration": "35 min",
+            "order": 7,
+            "isPreview": false
+          },
+          {
+            "id": "daa-2-5",
+            "title": "Strassen's Matrix Multiplication",
+            "description": "Sub-cubic matrix multiplication reducing multiplications from 8 to 7, achieving O(n^2.81) complexity.",
+            "videoUrl": "https://www.youtube.com/watch?v=vStua4YTkQY",
+            "youtubeVideoId": "vStua4YTkQY",
+            "author": "THE GATEHUB",
+            "duration": "26 min",
+            "order": 8,
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "title": "Module 3 \u2014 Greedy Algorithms",
+        "order": 3,
+        "lessons": [
+          {
+            "id": "daa-3-1",
+            "title": "Greedy Method Characteristics",
+            "description": "Greedy choice property, optimal substructure, feasibility checks, and comparison with dynamic programming.",
+            "videoUrl": "https://www.youtube.com/watch?v=ARvQcqJ_-NY",
+            "youtubeVideoId": "ARvQcqJ_-NY",
+            "author": "Abdul Bari",
+            "duration": "24 min",
+            "order": 9,
+            "isPreview": false
+          },
+          {
+            "id": "daa-3-2",
+            "title": "Fractional Knapsack Problem",
+            "description": "Value-to-weight ratio sorting and greedy item selection for optimal fractional profit.",
+            "videoUrl": "https://www.youtube.com/watch?v=oTTzNMHM05I",
+            "youtubeVideoId": "oTTzNMHM05I",
+            "author": "Abdul Bari",
+            "duration": "26 min",
+            "order": 10,
+            "isPreview": false
+          },
+          {
+            "id": "daa-3-3",
+            "title": "Job Sequencing with Deadlines",
+            "description": "Maximizing profit by scheduling jobs within deadlines using greedy time-slot allocation.",
+            "videoUrl": "https://www.youtube.com/watch?v=zPtI8q9gvX8",
+            "youtubeVideoId": "zPtI8q9gvX8",
+            "author": "Abdul Bari",
+            "duration": "28 min",
+            "order": 11,
+            "isPreview": false
+          },
+          {
+            "id": "daa-3-4",
+            "title": "Minimum Spanning Trees: Prim's & Kruskal's",
+            "description": "Greedy edge selection: Prim's vertex-cut algorithm and Kruskal's cycle-check algorithm with Disjoint Sets.",
+            "videoUrl": "https://www.youtube.com/watch?v=4ZlRH0eK-qQ",
+            "youtubeVideoId": "4ZlRH0eK-qQ",
+            "author": "Abdul Bari",
+            "duration": "35 min",
+            "order": 12,
+            "isPreview": false
+          },
+          {
+            "id": "daa-3-5",
+            "title": "Huffman Coding & Data Compression",
+            "description": "Prefix-free optimal binary encoding using priority-queue built frequency trees.",
+            "videoUrl": "https://www.youtube.com/watch?v=uDS8AkTAcIU",
+            "youtubeVideoId": "uDS8AkTAcIU",
+            "author": "Gate Smashers",
+            "duration": "24 min",
+            "order": 13,
+            "isPreview": false
+          },
+          {
+            "id": "daa-3-6",
+            "title": "Dijkstra's Single-Source Shortest Path",
+            "description": "Greedy relaxation algorithm on non-negative weighted graphs and min-heap implementation.",
+            "videoUrl": "https://www.youtube.com/watch?v=XB4MIexjvY0",
+            "youtubeVideoId": "XB4MIexjvY0",
+            "author": "Abdul Bari",
+            "duration": "32 min",
+            "order": 14,
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "title": "Module 4 \u2014 Dynamic Programming",
+        "order": 4,
+        "lessons": [
+          {
+            "id": "daa-4-1",
+            "title": "Dynamic Programming Principles & 0/1 Knapsack",
+            "description": "Principle of optimality, overlapping subproblems, memoization table vs tabulation for 0/1 Knapsack.",
+            "videoUrl": "https://www.youtube.com/watch?v=nLmhmB6NzcM",
+            "youtubeVideoId": "nLmhmB6NzcM",
+            "author": "Abdul Bari",
+            "duration": "36 min",
+            "order": 15,
+            "isPreview": false
+          },
+          {
+            "id": "daa-4-2",
+            "title": "Matrix Chain Multiplication (MCM)",
+            "description": "Optimal parenthesization of matrix products, recurrence formulation, and O(n^3) DP table construction.",
+            "videoUrl": "https://www.youtube.com/watch?v=prx1psByp7U",
+            "youtubeVideoId": "prx1psByp7U",
+            "author": "Abdul Bari",
+            "duration": "34 min",
+            "order": 16,
+            "isPreview": false
+          },
+          {
+            "id": "daa-4-3",
+            "title": "Longest Common Subsequence (LCS)",
+            "description": "Subsequence comparison, 2D dynamic programming grid, and backtracking to reconstruct the optimal string.",
+            "videoUrl": "https://www.youtube.com/watch?v=sSno9rV8Rhg",
+            "youtubeVideoId": "sSno9rV8Rhg",
+            "author": "Abdul Bari",
+            "duration": "30 min",
+            "order": 17,
+            "isPreview": false
+          },
+          {
+            "id": "daa-4-4",
+            "title": "All-Pairs Shortest Path (Floyd-Warshall)",
+            "description": "Transitive closure and all-pairs shortest paths using k-intermediate vertex matrix updates.",
+            "videoUrl": "https://www.youtube.com/watch?v=oNI0rf2P9gE",
+            "youtubeVideoId": "oNI0rf2P9gE",
+            "author": "Abdul Bari",
+            "duration": "28 min",
+            "order": 18,
+            "isPreview": false
+          },
+          {
+            "id": "daa-4-5",
+            "title": "Bellman-Ford Algorithm for Negative Weight Cycles",
+            "description": "Edge relaxation for |V|-1 passes, handling negative weights, and detecting negative-weight cycles.",
+            "videoUrl": "https://www.youtube.com/watch?v=SiI03wnREt4",
+            "youtubeVideoId": "SiI03wnREt4",
+            "author": "Gate Smashers",
+            "duration": "26 min",
+            "order": 19,
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "title": "Module 5 \u2014 Graph Algorithms",
+        "order": 5,
+        "lessons": [
+          {
+            "id": "daa-5-1",
+            "title": "Graph Traversals: Breadth First Search & Depth First Search",
+            "description": "Systematic graph exploration: queue-based BFS layer traversal and recursion-stack DFS traversal.",
+            "videoUrl": "https://www.youtube.com/watch?v=pcKY4hjDrxk",
+            "youtubeVideoId": "pcKY4hjDrxk",
+            "author": "Abdul Bari",
+            "duration": "30 min",
+            "order": 20,
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "title": "Module 6 \u2014 Backtracking",
+        "order": 6,
+        "lessons": [
+          {
+            "id": "daa-6-1",
+            "title": "Principles of Backtracking & State Space Tree",
+            "description": "Systematic state space search, bounding functions, pruning dead ends, and recursion depth.",
+            "videoUrl": "https://www.youtube.com/watch?v=DKCbsiDBN6c",
+            "youtubeVideoId": "DKCbsiDBN6c",
+            "author": "Abdul Bari",
+            "duration": "26 min",
+            "order": 21,
+            "isPreview": false
+          },
+          {
+            "id": "daa-6-2",
+            "title": "N-Queens Problem Algorithm",
+            "description": "Placing N non-attacking queens on an N x N chessboard using backtracking row constraint validation.",
+            "videoUrl": "https://www.youtube.com/watch?v=xFv_Hl4B83A",
+            "youtubeVideoId": "xFv_Hl4B83A",
+            "author": "Abdul Bari",
+            "duration": "30 min",
+            "order": 22,
+            "isPreview": false
+          },
+          {
+            "id": "daa-6-3",
+            "title": "Graph Coloring Problem",
+            "description": "Assigning m colors to vertices such that no adjacent vertices share a color, using state space search.",
+            "videoUrl": "https://www.youtube.com/watch?v=052VkKhIaQ4",
+            "youtubeVideoId": "052VkKhIaQ4",
+            "author": "Abdul Bari",
+            "duration": "28 min",
+            "order": 23,
+            "isPreview": false
+          },
+          {
+            "id": "daa-6-4",
+            "title": "Hamiltonian Cycle Problem",
+            "description": "Finding a closed loop visiting each vertex exactly once using backtracking cycle extension.",
+            "videoUrl": "https://www.youtube.com/watch?v=YGCOXSEXras",
+            "youtubeVideoId": "YGCOXSEXras",
+            "author": "Sagar Choudhary",
+            "duration": "24 min",
+            "order": 24,
+            "isPreview": false
+          }
+        ]
+      },
+      {
+        "title": "Module 7 \u2014 Branch and Bound",
+        "order": 7,
+        "lessons": [
+          {
+            "id": "daa-7-1",
+            "title": "Branch and Bound Concept & State Pruning",
+            "description": "BFS state-space exploration with FIFO/LIFO/LCBB, lower bound calculation, and branch pruning.",
+            "videoUrl": "https://www.youtube.com/watch?v=3RBNPc0_Q6g",
+            "youtubeVideoId": "3RBNPc0_Q6g",
+            "author": "Abdul Bari",
+            "duration": "28 min",
+            "order": 25,
+            "isPreview": false
+          },
+          {
+            "id": "daa-7-2",
+            "title": "Travelling Salesman Problem (TSP) with Branch & Bound",
+            "description": "Reduced cost matrix method for solving TSP optimal tours with Least Cost Branch and Bound (LCBB).",
+            "videoUrl": "https://www.youtube.com/watch?v=1FEP_sNb62k",
+            "youtubeVideoId": "1FEP_sNb62k",
+            "author": "Abdul Bari",
+            "duration": "35 min",
+            "order": 26,
+            "isPreview": false
+          },
+          {
+            "id": "daa-7-3",
+            "title": "15-Puzzle / Assignment Problem",
+            "description": "Cost estimation functions, Manhattan distance heuristics, and state-space exploration in branch and bound.",
+            "videoUrl": "https://www.youtube.com/watch?v=l6bqjCDK3Kg",
+            "youtubeVideoId": "l6bqjCDK3Kg",
+            "author": "TutorialsPoint",
+            "duration": "25 min",
+            "order": 27,
+            "isPreview": false
+          }
+        ]
+      }
+    ]
+  }
+]

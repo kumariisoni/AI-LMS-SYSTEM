@@ -1,0 +1,47 @@
+# Environment variables (never commit real secrets)
+.env
+.env.*
+.env.local
+.env.development
+.env.test
+.env.production
+!.env.example
+
+# ASP.NET Core & Local Settings
+**/appsettings.Development.json
+**/appsettings.*.local.json
+**/secrets.json
+**/secrets.*.json
+
+# Scratch scripts & temporary test runs
+scratch/
+AI-LMS/
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Build and compilation outputs
+bin/
+obj/
+dist/
+node_modules/
+
+# IDE & Editor files
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+
+# Operating System files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Database dumps
+*.bson
+*.dump
+dump/
