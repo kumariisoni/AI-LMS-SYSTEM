@@ -1,11 +1,22 @@
 import axios from "axios";
 
-const defaultApiUrl = import.meta.env.PROD
-  ? "/api"
-  : "http://localhost:5291/api";
+// Automatically resolve and normalize API base URL
+let rawUrl = import.meta.env.VITE_API_URL;
+let apiUrl;
+
+if (rawUrl && typeof rawUrl === "string" && rawUrl.trim().length > 0) {
+  apiUrl = rawUrl.trim().replace(/\/+$/, "");
+  if (!apiUrl.endsWith("/api")) {
+    apiUrl = `${apiUrl}/api`;
+  }
+} else {
+  apiUrl = import.meta.env.PROD
+    ? "https://ai-lms-backend-u52h.onrender.com/api"
+    : "http://localhost:5291/api";
+}
 
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || defaultApiUrl,
+  baseURL: apiUrl,
   headers: {
     "Content-Type": "application/json",
   },
@@ -28,10 +39,9 @@ api.interceptors.response.use(
   (response) => response,
   (error) => {
     if (error.response?.status === 401) {
-      const isAuthEndpoint = error.config?.url?.includes("/auth/login");
-      if (!isAuthEndpoint) {
-        localStorage.removeItem("token");
-      }
+      // Optional: clear auth on unauthorized
+      // localStorage.removeItem("token");
+      // localStorage.removeItem("user");
     }
     return Promise.reject(error);
   }

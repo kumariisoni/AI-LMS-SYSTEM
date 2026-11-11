@@ -79,7 +79,7 @@ builder.Services
 builder.Services.AddAuthorization();
 
 // ========================================
-// 5. CORS Configuration
+// 5. Dynamic & Permissive Cloud CORS Configuration
 // ========================================
 var frontendUrl = Environment.GetEnvironmentVariable("FRONTEND_URL") 
     ?? builder.Configuration["FRONTEND_URL"];
@@ -88,31 +88,47 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowFrontend", policy =>
     {
-        var allowedOrigins = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
+        policy.SetIsOriginAllowed(origin =>
         {
-            "http://localhost:5173",
-            "http://localhost:5174",
-            "http://localhost:3000",
-            "https://localhost:5173",
-            "https://localhost:5174"
-        };
+            if (string.IsNullOrWhiteSpace(origin)) return false;
 
-        if (!string.IsNullOrWhiteSpace(frontendUrl))
-        {
-            var splitOrigins = frontendUrl
-                .Split(new[] { ',', ';' }, StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries)
-                .Select(u => u.TrimEnd('/'));
-
-            foreach (var o in splitOrigins)
+            // Allow localhost on any port
+            if (origin.StartsWith("http://localhost:", StringComparison.OrdinalIgnoreCase) ||
+                origin.StartsWith("https://localhost:", StringComparison.OrdinalIgnoreCase))
             {
-                allowedOrigins.Add(o);
+                return true;
             }
-        }
 
-        policy.WithOrigins(allowedOrigins.ToArray())
-            .AllowAnyHeader()
-            .AllowAnyMethod()
-            .AllowCredentials();
+            // Allow any Vercel domain (*.vercel.app)
+            try
+            {
+                var host = new Uri(origin).Host;
+                if (host.EndsWith(".vercel.app", StringComparison.OrdinalIgnoreCase) ||
+                    string.Equals(host, "vercel.app", StringComparison.OrdinalIgnoreCase))
+                {
+                    return true;
+                }
+            }
+            catch { }
+
+            // Allow custom configured FRONTEND_URL
+            if (!string.IsNullOrWhiteSpace(frontendUrl))
+            {
+                var splitOrigins = frontendUrl
+                    .Split(new[] { ',', ';' }, StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries)
+                    .Select(u => u.TrimEnd('/'));
+
+                if (splitOrigins.Any(o => string.Equals(o, origin.TrimEnd('/'), StringComparison.OrdinalIgnoreCase)))
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        })
+        .AllowAnyHeader()
+        .AllowAnyMethod()
+        .AllowCredentials();
     });
 });
 
@@ -173,9 +189,24 @@ if (app.Environment.IsDevelopment())
 }
 
 // ========================================
-// 11. CORS, Authentication & Authorization Pipeline
+// 11. CORS & Intelligent Route Rewriting
 // ========================================
 app.UseCors("AllowFrontend");
+
+// Auto-prefix /api for requests that omit the /api segment (e.g. /Courses -> /api/Courses)
+app.Use(async (context, next) =>
+{
+    var path = context.Request.Path.Value ?? "";
+    if (!path.StartsWith("/api", StringComparison.OrdinalIgnoreCase) &&
+        !path.StartsWith("/health", StringComparison.OrdinalIgnoreCase) &&
+        !path.StartsWith("/swagger", StringComparison.OrdinalIgnoreCase) &&
+        path != "/")
+    {
+        context.Request.Path = "/api" + path;
+    }
+    await next();
+});
+
 app.UseAuthentication();
 app.UseAuthorization();
 
