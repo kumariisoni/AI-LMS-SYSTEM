@@ -27,14 +27,15 @@ public class MongoDbContext
 
         try
         {
-            var mongoUrl = MongoUrl.Create(_connectionString);
-            _client = new MongoClient(mongoUrl);
+            var settings = MongoClientSettings.FromConnectionString(_connectionString);
+            _client = new MongoClient(settings);
 
+            var mongoUrl = MongoUrl.Create(_connectionString);
             var dbFromUrl = mongoUrl.DatabaseName;
             DatabaseName =
                 Environment.GetEnvironmentVariable("MONGODB_DATABASE") ??
                 configuration["MongoDB:DatabaseName"] ??
-                (!string.IsNullOrWhiteSpace(dbFromUrl) ? dbFromUrl : "AI_LMS");
+                (!string.IsNullOrWhiteSpace(dbFromUrl) && !string.Equals(dbFromUrl, "admin", StringComparison.OrdinalIgnoreCase) ? dbFromUrl : "AI_LMS");
 
             _database = _client.GetDatabase(DatabaseName);
         }
@@ -84,6 +85,21 @@ public class MongoDbContext
 
             var unescapedUser = Uri.UnescapeDataString(user);
             var escapedUser = Uri.EscapeDataString(unescapedUser);
+
+            // Automatically ensure authSource=admin on cloud clusters if not explicitly set
+            if (host.Contains("mongodb.net", StringComparison.OrdinalIgnoreCase) &&
+                !pathAndQuery.Contains("authSource=", StringComparison.OrdinalIgnoreCase))
+            {
+                if (string.IsNullOrWhiteSpace(pathAndQuery) || pathAndQuery == "/")
+                {
+                    pathAndQuery = "/AI_LMS?authSource=admin&retryWrites=true&w=majority";
+                }
+                else
+                {
+                    var prefix = pathAndQuery.Contains('?') ? "&" : "?";
+                    pathAndQuery += prefix + "authSource=admin";
+                }
+            }
 
             return $"{scheme}{escapedUser}:{escapedPass}@{host}{pathAndQuery}";
         }
