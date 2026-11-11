@@ -169,8 +169,20 @@ app.UseForwardedHeaders(new ForwardedHeadersOptions
 });
 
 // ========================================
-// 9. Production Early Health Check Endpoint
+// 9. Root & Health Check Endpoints
 // ========================================
+app.MapGet("/", () => Results.Ok(new
+{
+    service = "AI-LMS.API",
+    name = "Learnova AI Learning Management System API",
+    status = "running",
+    runtime = ".NET 10.0",
+    health = "/health",
+    databaseHealth = "/api/health",
+    frontend = "https://ai-lms-system.vercel.app",
+    timestamp = DateTime.UtcNow
+}));
+
 app.MapGet("/health", () => Results.Ok(new
 {
     status = "healthy",
@@ -180,13 +192,14 @@ app.MapGet("/health", () => Results.Ok(new
 }));
 
 // ========================================
-// 10. Swagger (Development Mode)
+// 10. Swagger API Documentation
 // ========================================
-if (app.Environment.IsDevelopment())
+app.UseSwagger();
+app.UseSwaggerUI(c =>
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "AI-LMS API v1");
+    c.RoutePrefix = "swagger";
+});
 
 // ========================================
 // 11. CORS & Intelligent Route Rewriting
